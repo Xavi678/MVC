@@ -1,0 +1,108 @@
+﻿@model IEnumerable<MvcMovie.Models.Client>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+  
+    @using (Html.BeginForm())
+    {
+<p>
+    NIF: @Html.TextBox("SearchString") Paraula: @Html.TextBox("nom")<br />
+    <input type="submit" value="Filter" />
+</p>
+}
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NIF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cognom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNaixement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carrer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poblacio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Provincia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tlf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aut)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NIF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNaixement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carrer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poblacio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provincia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tlf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aut)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.NIF }) |
+                @Html.ActionLink("Details", "Details", new { id = item.NIF }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.NIF })
+            </td>
+        </tr>
+        }
+
+    </table>
