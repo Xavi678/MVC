@@ -16,13 +16,13 @@ namespace MvcMovie.Migrations
 
         protected override void Seed(MvcMovie.Models.MovieDBContext context)
         {
-            context.Movies.AddOrUpdate(i => i.Title,
+            context.Movies.AddOrUpdate(i => i.Titol,
                 new Movie
                 {
-                    Title = "When Harry Met Sally",
-                    ReleaseDate = DateTime.Parse("1989-1-11"),
-                    Genre = "Romantic Comedy",
-                    Price = 7.99M,
+                    Titol = "When Harry Met Sally",
+                    DataEstrena = DateTime.Parse("1989-1-11"),
+                    Genere = "Romantic Comedy",
+                    Preu = 7.99M,
                     IMDB = 678,
                     Cartell = "Cartell",
                     Durada =5446
@@ -31,10 +31,10 @@ namespace MvcMovie.Migrations
 
                  new Movie
                  {
-                     Title = "Ghostbusters ",
-                     ReleaseDate = DateTime.Parse("1984-3-13"),
-                     Genre = "Comedy",
-                     Price = 8.99M,
+                     Titol = "Ghostbusters ",
+                     DataEstrena = DateTime.Parse("1984-3-13"),
+                     Genere = "Comedy",
+                     Preu = 8.99M,
                      IMDB =5465,
                      Cartell = "Cartell",
                      Durada = 5446
@@ -42,10 +42,10 @@ namespace MvcMovie.Migrations
 
                  new Movie
                  {
-                     Title = "Ghostbusters 2",
-                     ReleaseDate = DateTime.Parse("1986-2-23"),
-                     Genre = "Comedy",
-                     Price = 9.99M,
+                     Titol = "Ghostbusters 2",
+                     DataEstrena = DateTime.Parse("1986-2-23"),
+                     Genere = "Comedy",
+                     Preu = 9.99M,
                      IMDB = 546546,
                      Cartell = "Cartell",
                      Durada = 5446
@@ -53,10 +53,10 @@ namespace MvcMovie.Migrations
 
                new Movie
                {
-                   Title = "Rio Bravo",
-                   ReleaseDate = DateTime.Parse("1959-4-15"),
-                   Genre = "Western",
-                   Price = 3.99M,
+                   Titol = "Rio Bravo",
+                   DataEstrena = DateTime.Parse("1959-4-15"),
+                   Genere = "Western",
+                   Preu = 3.99M,
                    IMDB=54654,
                    Cartell = "Cartell",
                    Durada = 5446

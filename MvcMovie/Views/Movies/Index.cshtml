@@ -6,32 +6,33 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p >
+    @Html.ActionLink("Crear Nova", "Create")
 
     @using (Html.BeginForm())
     {
-<p>
+<p class="filtre">
      Genre: @Html.DropDownList("movieGenre", "All")
-    Title: @Html.TextBox("SearchString") <br />
-    IMDB: @Html.TextBox("SearchString2")<br />
+    Title: @Html.TextBox("SearchString") 
+    IMDB: @Html.TextBox("SearchString2")
     <input type="submit" value="Filter" />
+    <input type="reset" />
 </p>
 }
     </p>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.Titol)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @Html.DisplayNameFor(model => model.DataEstrena)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Genre)
+                @Html.DisplayNameFor(model => model.Genere)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Preu)
             </th>
 
             <th>
@@ -56,16 +57,16 @@
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => item.Titol)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
+                @Html.DisplayFor(modelItem => item.DataEstrena)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Genre)
+                @Html.DisplayFor(modelItem => item.Genere)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                @Html.DisplayFor(modelItem => item.Preu)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IMDB)

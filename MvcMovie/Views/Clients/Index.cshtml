@@ -7,13 +7,14 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nou", "Create")
   
     @using (Html.BeginForm())
     {
-<p>
-    NIF: @Html.TextBox("SearchString") Paraula: @Html.TextBox("nom")<br />
+<p class="filtre">
+    NIF: @Html.TextBox("SearchString") Paraula: @Html.TextBox("nom")
     <input type="submit" value="Filter" />
+    <input type="reset"/>
 </p>
 }
     </p>
@@ -99,10 +100,29 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.NIF }) |
-                @Html.ActionLink("Details", "Details", new { id = item.NIF }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.NIF })
+                <!-- @Html.ActionLink("Details", "Details", new { id = item.NIF }) | -->
+                
+                @Html.ActionLink("Delete", "Delete", new { id = item.NIF }, new { onclick=" return confirmacio();" })
             </td>
         </tr>
         }
+
+        <script>
+            function confirmacio() {
+               
+                var c = confirm("Segur que vols borrar l'element?");
+
+                if (c == true) {
+
+                    
+                    
+
+                } else {
+                    return false;
+                }
+
+
+            }
+        </script>
 
     </table>

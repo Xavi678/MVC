@@ -110,7 +110,7 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Clients/Delete/5
-        public ActionResult Delete(string id)
+        /*public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -122,12 +122,12 @@ namespace MvcMovie.Controllers
                 return HttpNotFound();
             }
             return View(client);
-        }
+        }*/
 
         // POST: Clients/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult Delete(string id)
         {
             Client client = db.Clients.Find(id);
             db.Clients.Remove(client);

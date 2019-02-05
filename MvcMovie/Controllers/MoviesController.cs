@@ -20,8 +20,8 @@ namespace MvcMovie.Controllers
             var GenreLst = new List<string>();
 
             var GenreQry = from d in db.Movies
-                           orderby d.Genre
-                           select d.Genre;
+                           orderby d.Genere
+                           select d.Genere;
 
             GenreLst.AddRange(GenreQry.Distinct());
             ViewBag.movieGenre = new SelectList(GenreLst);
@@ -32,7 +32,7 @@ namespace MvcMovie.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                movies = movies.Where(s => s.Title.Contains(searchString));
+                movies = movies.Where(s => s.Titol.Contains(searchString));
             }
 
             if (!String.IsNullOrEmpty(searchString2))
@@ -43,7 +43,7 @@ namespace MvcMovie.Controllers
 
             if (!string.IsNullOrEmpty(movieGenre))
             {
-                movies = movies.Where(x => x.Genre == movieGenre);
+                movies = movies.Where(x => x.Genere == movieGenre);
             }
 
             return View(movies);

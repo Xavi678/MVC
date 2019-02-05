@@ -12,16 +12,17 @@ namespace MvcMovie.Models
     public class Movie
     {
         public int ID { get; set; }
-        public string Title { get; set; }
+        public string Titol { get; set; }
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public DateTime DataEstrena { get; set; }
+        public string Genere { get; set; }
+        public decimal Preu { get; set; }
         public int IMDB { get; set; }
         public string Cartell { get; set;}
         public int Durada { get; set;  }
+        public string Sinopsi { get; set; }
     }
 
     public class MovieDBContext : DbContext

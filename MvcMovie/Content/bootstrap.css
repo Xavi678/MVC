@@ -1288,7 +1288,12 @@ h6,
 }
 p {
   margin: 0 0 10px;
+ 
 }
+
+  .filtre{
+      border: 1px solid black;
+  }
 .lead {
   margin-bottom: 20px;
   font-size: 16px;
